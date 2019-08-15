@@ -13,6 +13,10 @@ $(function(){
         event.preventDefault();
         //taking what is being submitted
         let input = $('#shopping-list-entry');
+        if (input.val()==''){
+            alert('Please enter a shopping item');
+            return;
+        }
         //if they enter more than one item, split the item into an array by empty space
         let values = input.val().split(' ');
         //define all items as an empty string
